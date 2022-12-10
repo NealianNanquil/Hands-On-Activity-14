@@ -1,0 +1,12 @@
+
+  - name: Installation and setup of Nova
+    apt:
+      name: nova-compute
+      state: present
+      update_cache: yes
+
+  - name: Restart the Nova
+    service:
+      name: nova-compute
+      state: restarted
+      enabled: yes
